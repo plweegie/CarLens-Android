@@ -43,7 +43,7 @@ class StickerNode(
         }
 
         //rotate note so it always faces camera
-        val direction = Vector3.subtract(scene.camera.worldPosition, worldPosition)
+        val direction = Vector3.subtract(scene?.camera?.worldPosition, worldPosition)
         worldRotation = Quaternion.lookRotation(direction, Vector3.up())
     }
 

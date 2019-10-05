@@ -114,6 +114,8 @@ Icon
 Network Trash Folder
 Temporary Items
 .apdisk
+ajcore*.txt
+app/mapping.txt
 
 ## Linux
 *~

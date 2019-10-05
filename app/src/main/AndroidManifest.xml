@@ -47,9 +47,5 @@
             android:name=".feature.onboarding.OnboardingActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme" />
-
-        <meta-data
-            android:name="net.hockeyapp.android.appIdentifier"
-            android:value="${HOCKEY_APP_ID}" />
     </application>
 </manifest>

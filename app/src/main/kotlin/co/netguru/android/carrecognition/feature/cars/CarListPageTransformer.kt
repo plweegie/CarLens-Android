@@ -1,6 +1,6 @@
 package co.netguru.android.carrecognition.feature.cars
 
-import android.support.v4.view.ViewPager
+import androidx.viewpager.widget.ViewPager
 import android.view.View
 import kotlinx.android.synthetic.main.car_list_item_view.view.*
 

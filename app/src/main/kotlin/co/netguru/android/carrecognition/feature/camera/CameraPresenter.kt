@@ -2,7 +2,7 @@ package co.netguru.android.carrecognition.feature.camera
 
 import android.graphics.Bitmap
 import android.media.Image
-import android.support.annotation.StringRes
+import androidx.annotation.StringRes
 import co.netguru.android.carrecognition.R
 import co.netguru.android.carrecognition.application.TFModule
 import co.netguru.android.carrecognition.application.scope.ActivityScope
@@ -44,7 +44,7 @@ class CameraPresenter @Inject constructor(
     private val compositeDisposable = CompositeDisposable()
 
     private val recognitionData = LimitedList<Recognition>(SAMPLE_SIZE)
-    private var anchors = emptyList<Anchor>()
+    private var anchors = emptyList<Anchor?>()
     private var processing = false
     private var nrOfTries = NR_OF_TRIES
 
@@ -92,7 +92,7 @@ class CameraPresenter @Inject constructor(
                 val isLegal = anchors.asSequence()
                     .map {
                         val pose =
-                            it.pose //cache pose (anchor.pose is mutable and can be changed by ar core)
+                            it!!.pose //cache pose (anchor.pose is mutable and can be changed by ar core)
                         val dx = pose.tx() - hitPoint.hitPose.tx()
                         val dy = pose.ty() - hitPoint.hitPose.ty()
                         val dz = pose.tz() - hitPoint.hitPose.tz()

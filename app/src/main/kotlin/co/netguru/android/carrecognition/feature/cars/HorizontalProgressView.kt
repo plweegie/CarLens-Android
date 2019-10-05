@@ -1,7 +1,7 @@
 package co.netguru.android.carrecognition.feature.cars
 
 import android.content.Context
-import android.support.annotation.StringRes
+import androidx.annotation.StringRes
 import android.util.AttributeSet
 import android.util.TypedValue
 import android.view.LayoutInflater

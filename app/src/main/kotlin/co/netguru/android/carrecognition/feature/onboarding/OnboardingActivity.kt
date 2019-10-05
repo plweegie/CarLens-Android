@@ -1,7 +1,7 @@
 package co.netguru.android.carrecognition.feature.onboarding
 
 import android.os.Bundle
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
 import co.netguru.android.carrecognition.R
 import co.netguru.android.carrecognition.common.extensions.replaceFragment
 

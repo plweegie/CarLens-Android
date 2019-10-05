@@ -4,7 +4,7 @@ import android.content.Context
 import android.database.DataSetObserver
 import android.graphics.Color
 import android.graphics.drawable.GradientDrawable
-import android.support.v4.view.ViewPager
+import androidx.viewpager.widget.ViewPager
 import android.util.AttributeSet
 import android.view.LayoutInflater
 import android.widget.ImageView

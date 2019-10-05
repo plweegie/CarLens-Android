@@ -3,7 +3,7 @@ package co.netguru.android.carrecognition.feature.camera
 import android.animation.ValueAnimator
 import android.media.Image
 import android.os.Bundle
-import android.support.design.widget.BottomSheetBehavior
+import com.google.android.material.bottomsheet.BottomSheetBehavior
 import android.util.DisplayMetrics
 import android.view.View
 import android.widget.Toast
@@ -153,8 +153,8 @@ class CameraActivity : MvpActivity<CameraContract.View, CameraContract.Presenter
         permissions.visibility = View.VISIBLE
     }
 
-    override fun createAnchor(hitPoint: HitResult, car: Cars): Anchor {
-        val anchor = AnchorNode(arSceneView.session.createAnchor(hitPoint.hitPose))
+    override fun createAnchor(hitPoint: HitResult, car: Cars): Anchor? {
+        val anchor = AnchorNode(arSceneView.session?.createAnchor(hitPoint.hitPose))
         anchor.setParent(arSceneView.scene)
         anchor.addChild(StickerNode(car, this) { showDetails(car) })
         return anchor.anchor
@@ -166,7 +166,7 @@ class CameraActivity : MvpActivity<CameraContract.View, CameraContract.Presenter
             return null
         }
         return try {
-            arSceneView.arFrame.acquireCameraImage()
+            arSceneView?.arFrame?.acquireCameraImage()
         } catch (e: NotYetAvailableException) {
             null
         }
@@ -199,15 +199,15 @@ class CameraActivity : MvpActivity<CameraContract.View, CameraContract.Presenter
 
     override fun frameStreamEnabled(enabled: Boolean) {
         if (enabled) {
-            arSceneView.scene.setOnUpdateListener {
-                val frame = arSceneView.arFrame ?: return@setOnUpdateListener
+            arSceneView.scene.addOnUpdateListener {
+                val frame = arSceneView.arFrame ?: return@addOnUpdateListener
                 if (frame.camera.trackingState != TrackingState.TRACKING) {
-                    return@setOnUpdateListener
+                    return@addOnUpdateListener
                 }
                 presenter.frameUpdated()
             }
         } else {
-            arSceneView.scene.setOnUpdateListener(null)
+            arSceneView.scene.addOnUpdateListener(null)
         }
     }
 

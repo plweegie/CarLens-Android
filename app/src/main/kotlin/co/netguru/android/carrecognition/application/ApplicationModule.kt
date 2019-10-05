@@ -1,9 +1,9 @@
 package co.netguru.android.carrecognition.application
 
-import android.arch.persistence.room.Room
+import androidx.room.Room
 import android.content.Context
 import android.content.SharedPreferences
-import android.preference.PreferenceManager
+import androidx.preference.PreferenceManager
 import co.netguru.android.carrecognition.application.scope.AppScope
 import co.netguru.android.carrecognition.data.db.AppDatabase
 import co.netguru.android.carrecognition.data.recognizer.TFWrapper

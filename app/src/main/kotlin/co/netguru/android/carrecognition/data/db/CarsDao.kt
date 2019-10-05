@@ -1,6 +1,6 @@
 package co.netguru.android.carrecognition.data.db
 
-import android.arch.persistence.room.*
+import androidx.room.*
 import io.reactivex.Maybe
 import io.reactivex.Single
 

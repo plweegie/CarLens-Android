@@ -1,68 +1,65 @@
 ext {
     // Versions
-    supportLibraryVersion = '27.1.1'
-    daggerVersion = '2.15'
-    okHttpVersion = '3.10.0'
-    retrofitVersion = '2.3.0'
-    stethoVersion = '1.5.0'
-    mosbyVersion = '3.1.0'
-    glideVersion = '4.6.1'
-    paperParcelVersion = '2.0.5'
-    ankoVersion = '0.10.4'
+    androidXVersion = '1.0.0'
+    daggerVersion = '2.23.2'
+    okHttpVersion = '4.2.0'
+    retrofitVersion = '2.6.1'
+    stethoVersion = '1.5.1'
+    mosbyVersion = '3.1.1'
+    glideVersion = '4.10.0'
+    paperParcelVersion = '2.0.8'
+    ankoVersion = '0.10.8'
     permissionDispatcherVersion = '3.2.0'
-    roomVersion = '1.1.1'
-    hockeyAppVersion = '5.1.0'
 
     libs = [
             kotlin                  : "org.jetbrains.kotlin:kotlin-stdlib:$kotlinVersion",
             ankoCommons             : "org.jetbrains.anko:anko-commons:$ankoVersion",
             ankoCommonsSupportV7    : "org.jetbrains.anko:anko-appcompat-v7-commons:$ankoVersion",
             ankoCommonsSupportV4    : "org.jetbrains.anko:anko-support-v4-commons:$ankoVersion",
-            appCompat               : "com.android.support:appcompat-v7:$supportLibraryVersion",
-            recyclerView            : "com.android.support:recyclerview-v7:$supportLibraryVersion",
-            cardView                : "com.android.support:cardview-v7:$supportLibraryVersion",
-            gridLayout              : "com.android.support:gridlayout-v7:$supportLibraryVersion",
-            mediaRouter             : "com.android.support:mediarouter-v7:$supportLibraryVersion",
-            palette                 : "com.android.support:palette-v7:$supportLibraryVersion",
-            preference              : "com.android.support:preference-v7:$supportLibraryVersion",
-            annotations             : "com.android.support:support-annotations:$supportLibraryVersion",
-            constraintLayout        : "com.android.support.constraint:constraint-layout:1.0.2",
-            design                  : "com.android.support:design:$supportLibraryVersion",
+            appCompat               : "androidx.appcompat:appcompat:$androidXVersion",
+            recyclerView            : "androidx.recyclerview:recyclerview:$androidXVersion",
+            cardView                : "androidx.cardview:cardview:$androidXVersion",
+            gridLayout              : "androidx.gridlayout:gridlayout:$androidXVersion",
+            mediaRouter             : 'androidx.mediarouter:mediarouter:1.1.0',
+            palette                 : "androidx.palette:palette:$androidXVersion",
+            preference              : 'androidx.preference:preference:1.1.0',
+            annotations             : 'androidx.annotation:annotation:1.1.0',
+            constraintLayout        : 'androidx.constraintlayout:constraintlayout:1.1.3',
+            design                  : 'com.google.android.material:material:1.0.0',
             mosby                   : "com.hannesdorfmann.mosby3:mvp:$mosbyVersion",
             mosbyMvi                : "com.hannesdorfmann.mosby3:mvi:$mosbyVersion",
             mosbyViewState          : "com.hannesdorfmann.mosby3:viewstate:$mosbyVersion",
             mosbyLce                : "com.hannesdorfmann.mosby3:mvp-lce:$mosbyVersion",
             mosbyNullObject         : "com.hannesdorfmann.mosby3:mvp-nullobject-presenter:$mosbyVersion",
-            rxJava2                 : "io.reactivex.rxjava2:rxjava:2.1.12",
-            rxKotlin2               : "io.reactivex.rxjava2:rxkotlin:2.2.0",
-            rxAndroid2              : "io.reactivex.rxjava2:rxandroid:2.0.2",
+            rxJava2                 : "io.reactivex.rxjava2:rxjava:2.2.12",
+            rxKotlin2               : "io.reactivex.rxjava2:rxkotlin:2.4.0",
+            rxAndroid2              : "io.reactivex.rxjava2:rxandroid:2.1.1",
             dagger                  : "com.google.dagger:dagger:$daggerVersion",
             daggerAndroid           : "com.google.dagger:dagger-android:$daggerVersion",
             daggerAndroidSupport    : "com.google.dagger:dagger-android-support:$daggerVersion",
-            gson                    : "com.google.code.gson:gson:2.8.0",
+            gson                    : "com.google.code.gson:gson:2.8.5",
             okHttp                  : "com.squareup.okhttp3:okhttp:$okHttpVersion",
             okHttpLoggingInterceptor: "com.squareup.okhttp3:logging-interceptor:$okHttpVersion",
             retrofit                : "com.squareup.retrofit2:retrofit:$retrofitVersion",
             retrofitGsonConverter   : "com.squareup.retrofit2:converter-gson:$retrofitVersion",
             retrofitRxJava2Adapter  : "com.squareup.retrofit2:adapter-rxjava2:$retrofitVersion",
-            threetenabp             : "com.jakewharton.threetenabp:threetenabp:1.0.5",
-            timber                  : "com.jakewharton.timber:timber:4.7.0",
+            threetenabp             : "com.jakewharton.threetenabp:threetenabp:1.2.1",
+            timber                  : "com.jakewharton.timber:timber:4.7.1",
             stetho                  : "com.facebook.stetho:stetho:$stethoVersion",
             stethoOkhttp            : "com.facebook.stetho:stetho-okhttp3:$stethoVersion",
             glide                   : "com.github.bumptech.glide:glide:$glideVersion",
             strictmodeNotifier      : "com.nshmura:strictmode-notifier:0.9.3",
             blockCanary             : "com.github.markzhai:blockcanary-android:1.5.0",
-            leakCanary              : "com.squareup.leakcanary:leakcanary-android:1.5.4",
+            leakCanary              : "com.squareup.leakcanary:leakcanary-android:1.6.3",
             paperParcel             : "nz.bradcampbell:paperparcel:$paperParcelVersion",
             permissiondispatcher    : "com.github.hotchemi:permissionsdispatcher:$permissionDispatcherVersion",
-            exifinterface           : "com.android.support:exifinterface:$supportLibraryVersion",
-            tensorflow              : "org.tensorflow:tensorflow-android:1.9.0",
-            fotoapparat             : 'io.fotoapparat.fotoapparat:library:2.2.0',
-            sceneform               : "com.google.ar.sceneform.ux:sceneform-ux:1.3.0",
-            lottie                  : 'com.airbnb.android:lottie:2.5.5',
-            roomRx                  : "android.arch.persistence.room:rxjava2:$roomVersion",
-            room                    : "android.arch.persistence.room:runtime:$roomVersion",
-            hockeyApp               : "net.hockeyapp.android:HockeySDK:$hockeyAppVersion",
+            exifinterface           : "androidx.exifinterface:exifinterface:$androidXVersion",
+            tensorflow              : "org.tensorflow:tensorflow-android:1.13.1",
+            fotoapparat             : 'io.fotoapparat.fotoapparat:library:2.7.0',
+            sceneform               : "com.google.ar.sceneform.ux:sceneform-ux:1.12.0",
+            lottie                  : 'com.airbnb.android:lottie:3.0.7',
+            roomRx                  : 'androidx.room:room-rxjava2:2.1.0',
+            room                    : 'androidx.room:room-runtime:2.1.0',
             roundButton             : "com.marozzi.roundbutton:round-button:1.0.7"
     ]
 
@@ -73,15 +70,15 @@ ext {
             glide                   : "com.github.bumptech.glide:compiler:$glideVersion", // kapt
             paperParcel             : "nz.bradcampbell:paperparcel-compiler:$paperParcelVersion", //kapt
             permissiondispatcher    : "com.github.hotchemi:permissionsdispatcher-processor:$permissionDispatcherVersion",
-            roomAnnotation          : "android.arch.persistence.room:compiler:$roomVersion"
+            roomAnnotation          : 'androidx.room:room-compiler:2.1.0'
     ]
 
     test = [
-            mockito                 : "org.mockito:mockito-core:2.18.0",
-            mockitoKotlin           : "com.nhaarman:mockito-kotlin-kt1.1:1.5.0",
+            mockito                 : "org.mockito:mockito-core:2.28.2",
+            mockitoKotlin           : "com.nhaarman:mockito-kotlin-kt1.1:1.6.0",
             junit                   : "junit:junit:4.12",
             mockWebServer           : "com.squareup.okhttp3:mockwebserver:$okHttpVersion",
             threetenabp             : 'org.threeten:threetenbp:1.3.2',
-            roomTest                : "android.arch.persistence.room:testing:$roomVersion"
+            roomTest                : 'androidx.room:room-testing:2.1.0'
     ]
 }

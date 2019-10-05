@@ -2,7 +2,6 @@ package co.netguru.android.carrecognition.application
 
 import android.content.Context
 import co.netguru.android.carrecognition.application.scope.AppScope
-import net.hockeyapp.android.CrashManager
 import javax.inject.Inject
 
 /**
@@ -25,6 +24,6 @@ import javax.inject.Inject
 class DebugMetricsHelper @Inject constructor() {
 
     internal fun init(context: Context) {
-        CrashManager.register(context)
+        //no-op
     }
 }

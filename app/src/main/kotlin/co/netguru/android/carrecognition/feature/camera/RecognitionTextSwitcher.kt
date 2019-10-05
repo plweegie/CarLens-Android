@@ -1,7 +1,7 @@
 package co.netguru.android.carrecognition.feature.camera
 
 import android.content.Context
-import android.support.v7.view.ContextThemeWrapper
+import androidx.appcompat.view.ContextThemeWrapper
 import android.util.AttributeSet
 import android.widget.TextSwitcher
 import android.widget.TextView
